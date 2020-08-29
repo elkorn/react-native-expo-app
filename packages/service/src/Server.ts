@@ -1,5 +1,6 @@
 import morgan from "morgan";
 import helmet from "helmet";
+import cors from "cors";
 
 import express, { Request, Response, NextFunction } from "express";
 import { BAD_REQUEST } from "http-status-codes";
@@ -11,6 +12,7 @@ import { logger } from "./shared/Logger";
 // Init express
 export const app = express();
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
