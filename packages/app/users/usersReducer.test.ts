@@ -1,27 +1,25 @@
 import { fetchUsersAsync } from "./usersActions";
 import { usersReducer, USERS_INITIAL_STATE } from "./usersReducer";
 import { mockUsers } from "../shared/mocks/mockUsers";
+import { LoadingState } from "../shared/types";
 
 describe("Users", () => {
   describe("reducer", () => {
     it(`${fetchUsersAsync.request} notifies fetching is in progress`, () => {
       expect(
         usersReducer(USERS_INITIAL_STATE, fetchUsersAsync.request())
-      ).toEqual({
-        ...USERS_INITIAL_STATE,
-        isFetching: true,
-      });
+      ).toHaveProperty("loadingState", LoadingState.Loading);
     });
 
-    it(`${fetchUsersAsync.request} does not replace users existing`, () => {
+    it(`${fetchUsersAsync.request} does not replace existing users `, () => {
       const state = {
         ...USERS_INITIAL_STATE,
         users: mockUsers,
       };
-      expect(usersReducer(state, fetchUsersAsync.request())).toEqual({
-        ...state,
-        isFetching: true,
-      });
+      expect(usersReducer(state, fetchUsersAsync.request())).toHaveProperty(
+        "users",
+        mockUsers
+      );
     });
 
     it(`${fetchUsersAsync.success} replaces existing users`, () => {
@@ -33,10 +31,7 @@ describe("Users", () => {
           },
           fetchUsersAsync.success(mockUsers)
         )
-      ).toEqual({
-        ...USERS_INITIAL_STATE,
-        users: mockUsers,
-      });
+      ).toHaveProperty("users", mockUsers);
     });
 
     it(`${fetchUsersAsync.success} puts fetched users in the state`, () => {
@@ -44,14 +39,11 @@ describe("Users", () => {
         usersReducer(
           {
             ...USERS_INITIAL_STATE,
-            isFetching: true,
+            loadingState: LoadingState.Success,
           },
           fetchUsersAsync.success(mockUsers)
         )
-      ).toEqual({
-        ...USERS_INITIAL_STATE,
-        users: mockUsers,
-      });
+      ).toHaveProperty("users", mockUsers);
     });
 
     it(`${fetchUsersAsync.failure} notifies of an error`, () => {
@@ -60,12 +52,12 @@ describe("Users", () => {
         usersReducer(
           {
             ...USERS_INITIAL_STATE,
-            isFetching: true,
           },
           fetchUsersAsync.failure(error)
         )
       ).toEqual({
         ...USERS_INITIAL_STATE,
+        loadingState: LoadingState.Failure,
         error,
       });
     });
@@ -77,10 +69,9 @@ describe("Users", () => {
       };
 
       const error = new Error("BLEP");
-      expect(usersReducer(state, fetchUsersAsync.failure(error))).toEqual({
-        ...state,
-        error,
-      });
+      expect(
+        usersReducer(state, fetchUsersAsync.failure(error))
+      ).toHaveProperty("users", mockUsers);
     });
   });
 });

@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchUsers } from "../../usersThunks";
-import { UsersList } from "./UsersList";
 import { State } from "../../../shared/state";
+import { fetchUsers } from "../../usersThunks";
+import ErrorBar from "../ErrorBar";
+import { UsersList } from "./UsersList";
 
 export function UsersListContainer() {
   const dispatch = useDispatch();
@@ -16,13 +17,18 @@ export function UsersListContainer() {
   }, []);
 
   const users = useSelector((state: State) => state.users.users);
-  const isFetching = useSelector((state: State) => state.users.isFetching);
+  const loadingState = useSelector((state: State) => state.users.loadingState);
+  const error = useSelector((state: State) => state.users.error);
 
   return (
-    <UsersList
-      users={users}
-      isFetching={isFetching}
-      onRefresh={dispatchFetchUsers}
-    />
+    <>
+      <ErrorBar error={error} />
+
+      <UsersList
+        users={users}
+        loadingState={loadingState}
+        onRefresh={dispatchFetchUsers}
+      />
+    </>
   );
 }

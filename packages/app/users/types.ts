@@ -1,5 +1,6 @@
 import * as UsersActions from "./usersActions";
 import { ActionType } from "typesafe-actions";
+import { LoadingState } from "../shared/types";
 
 export type UsersAction = ActionType<typeof UsersActions>;
 
@@ -10,7 +11,7 @@ export interface User {
 }
 
 export interface UsersState {
-  isFetching: boolean;
+  loadingState: LoadingState;
   users?: User[];
   error?: Error;
 }

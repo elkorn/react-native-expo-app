@@ -4,13 +4,14 @@ import renderer from "react-test-renderer";
 
 import { UsersList, UsersListProps } from "./UsersList";
 import { mockUsers } from "../../../shared/mocks/mockUsers";
+import { LoadingState } from "../../../shared/types";
 
 describe("components", () => {
   describe("UsersList", () => {
     describe("UsersList", () => {
       const baseProps: UsersListProps = {
         users: mockUsers,
-        isFetching: false,
+        loadingState: LoadingState.Idle,
         onRefresh: () => {},
       };
 
@@ -23,7 +24,7 @@ describe("components", () => {
         it("loading state", () => {
           const props = {
             ...baseProps,
-            isFetching: true,
+            loadingState: LoadingState.Loading,
           };
 
           const tree = renderer.create(<UsersList {...props} />);

@@ -1,10 +1,12 @@
 import { UsersState, UsersAction } from "./types";
 import { createReducer } from "typesafe-actions";
 import { fetchUsersAsync } from "./usersActions";
+import { LoadingState } from "../shared/types";
 
 export const USERS_INITIAL_STATE: UsersState = {
-  isFetching: false,
+  loadingState: LoadingState.Idle,
   users: undefined,
+  error: undefined,
 };
 
 export const usersReducer = createReducer<UsersState, UsersAction>(
@@ -12,17 +14,17 @@ export const usersReducer = createReducer<UsersState, UsersAction>(
 )
   .handleAction(fetchUsersAsync.request, (state) => ({
     ...state,
-    isFetching: true,
+    loadingState: LoadingState.Loading,
     error: undefined,
   }))
   .handleAction(fetchUsersAsync.success, (state, { payload: users }) => ({
     ...state,
-    isFetching: false,
+    loadingState: LoadingState.Success,
     users,
     error: undefined,
   }))
   .handleAction(fetchUsersAsync.failure, (state, { payload: error }) => ({
     ...state,
-    isFetching: false,
+    loadingState: LoadingState.Failure,
     error,
   }));

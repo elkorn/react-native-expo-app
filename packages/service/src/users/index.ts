@@ -3,7 +3,7 @@ import { IModule } from "../shared/types/Module";
 import { createUserRoutes } from "./usersRoutes";
 
 export const createUsersModule = (dbFilePath: string): IModule => ({
-  routes: createUserRoutes(dbFilePath),
+  routes: createUserRoutes(path.resolve(dbFilePath)),
 });
 
-export default createUsersModule(path.resolve("data/usersData.json"));
+export default createUsersModule("data/usersData.json");

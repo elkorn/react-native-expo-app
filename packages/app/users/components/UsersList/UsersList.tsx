@@ -2,16 +2,20 @@ import React from "react";
 import { FlatList, RefreshControl } from "react-native";
 import { User } from "../../types";
 import UsersListItem from "./UsersListItem";
+import { LoadingState } from "../../../shared/types";
 
 export function UsersList({
   users = [],
-  isFetching,
+  loadingState,
   onRefresh,
 }: UsersListProps) {
   return (
     <FlatList
       refreshControl={
-        <RefreshControl refreshing={isFetching} onRefresh={onRefresh} />
+        <RefreshControl
+          refreshing={loadingState === LoadingState.Loading}
+          onRefresh={onRefresh}
+        />
       }
       data={users}
       keyExtractor={(user) => user.id}
@@ -22,6 +26,6 @@ export function UsersList({
 
 export interface UsersListProps {
   users?: User[];
-  isFetching: boolean;
+  loadingState: LoadingState;
   onRefresh: () => void;
 }
