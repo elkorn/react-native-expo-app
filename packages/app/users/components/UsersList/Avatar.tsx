@@ -12,7 +12,7 @@ export default function Avatar({ src }: AvatarProps) {
         onLoadStart={() => setLoading(LoadingState.Loading)}
         onLoad={() => setLoading(LoadingState.Success)}
         source={{
-          uri: src,
+          uri: src.trim(),
         }}
       />
       <ActivityIndicator

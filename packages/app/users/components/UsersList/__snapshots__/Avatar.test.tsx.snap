@@ -19,7 +19,7 @@ exports[`components UsersList Avatar should match snapshot 1`] = `
     onLoadStart={[Function]}
     source={
       Object {
-        "uri": " https://i.pravatar.cc/150?img=1",
+        "uri": "https://i.pravatar.cc/150?img=1",
       }
     }
     style={

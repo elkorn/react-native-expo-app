@@ -86,7 +86,7 @@ exports[`components UsersList UsersList matches snapshot loaded state 1`] = `
             onLoadStart={[Function]}
             source={
               Object {
-                "uri": " https://i.pravatar.cc/150?img=1",
+                "uri": "https://i.pravatar.cc/150?img=1",
               }
             }
             style={
@@ -366,7 +366,7 @@ exports[`components UsersList UsersList matches snapshot loading state 1`] = `
             onLoadStart={[Function]}
             source={
               Object {
-                "uri": " https://i.pravatar.cc/150?img=1",
+                "uri": "https://i.pravatar.cc/150?img=1",
               }
             }
             style={
