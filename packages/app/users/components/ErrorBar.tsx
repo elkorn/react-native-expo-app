@@ -2,9 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { SERVICE_URL } from "../../shared/config";
 
-export default function ErrorBar({ error }: ErrorBarProps) {
-  if (!error) return null;
-
+export function ErrorBar({ error }: ErrorBarProps) {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>{error.message}</Text>
@@ -14,7 +12,7 @@ export default function ErrorBar({ error }: ErrorBarProps) {
 }
 
 interface ErrorBarProps {
-  error?: Error;
+  error: Error;
 }
 
 const styles = StyleSheet.create({

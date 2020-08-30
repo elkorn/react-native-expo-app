@@ -51,3 +51,8 @@ I implemented tests on 3 levels:
 1. Unit testing the effects of actions on the state in [usersReducer.test.ts](./packages/app/src/users/usersReducer.test.ts).
 2. Snapshots for UI components. The snapshots are quite verbose right now as I opted for simplicity. In a production setting this can of course be amended to keep the tests more focused.
 3. Testing the connection between the container and store in [UsersListContainer.test.tsx](./packages/app/src/users/components/UsersListContainer.test.tsx).
+
+#### Caveat
+
+Due to having the `useEffect` call put directly into the `UsersListContainer` there is an issue with the related tests and timing.
+The simplest solution to solve this issue is to create a `UsersListScreen` component that would take care of the initial behavior and render the `UsersListContainer`.

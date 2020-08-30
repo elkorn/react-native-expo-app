@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { State } from "../../../shared/state";
 import { fetchUsers } from "../../usersThunks";
-import ErrorBar from "../ErrorBar";
+import { ErrorBar } from "../ErrorBar";
 import { UsersList } from "./UsersList";
 
 export function UsersListContainer() {
@@ -22,7 +22,7 @@ export function UsersListContainer() {
 
   return (
     <>
-      <ErrorBar error={error} />
+      {error && <ErrorBar error={error} />}
 
       <UsersList
         users={users}
