@@ -1,26 +1,6 @@
-import { usersReducer, USERS_INITIAL_STATE } from "./usersReducer";
-import { ACTION_TYPES } from "./usersConstants";
 import { fetchUsersAsync } from "./usersActions";
-import { INITIAL_STATE } from "../shared/state";
-import { UsersAction, UsersState } from "./types";
-
-const mockUsers = [
-  {
-    id: "1",
-    avatar: " https://i.pravatar.cc/150?img=1",
-    name: "Morgan James",
-  },
-  {
-    id: "2",
-    avatar: "https://i.pravatar.cc/150?img=2",
-    name: "Esme Coleman",
-  },
-  {
-    id: "3",
-    avatar: "https://i.pravatar.cc/150?img=3",
-    name: "Gary Watson",
-  },
-];
+import { usersReducer, USERS_INITIAL_STATE } from "./usersReducer";
+import { mockUsers } from "../shared/mocks/mockUsers";
 
 describe("Users", () => {
   describe("reducer", () => {

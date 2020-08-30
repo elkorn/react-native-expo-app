@@ -1,0 +1,561 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components UsersList UsersList matches snapshot loaded state 1`] = `
+<RCTScrollView
+  data={
+    Array [
+      Object {
+        "avatar": " https://i.pravatar.cc/150?img=1",
+        "id": "1",
+        "name": "Morgan James",
+      },
+      Object {
+        "avatar": "https://i.pravatar.cc/150?img=2",
+        "id": "2",
+        "name": "Esme Coleman",
+      },
+      Object {
+        "avatar": "https://i.pravatar.cc/150?img=3",
+        "id": "3",
+        "name": "Gary Watson",
+      },
+    ]
+  }
+  disableVirtualization={false}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  onContentSizeChange={[Function]}
+  onEndReachedThreshold={2}
+  onLayout={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  refreshControl={
+    <RefreshControlMock
+      onRefresh={[Function]}
+      refreshing={false}
+    />
+  }
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  updateCellsBatchingPeriod={50}
+  viewabilityConfigCallbackPairs={Array []}
+  windowSize={21}
+>
+  <RCTRefreshControl />
+  <View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 0.3,
+            "borderColor": "#ddd",
+            "flex": 1,
+            "flexDirection": "row",
+            "paddingHorizontal": 12,
+            "paddingVertical": 12,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderRadius": 100,
+              "height": 100,
+              "justifyContent": "center",
+              "marginRight": 12,
+              "position": "relative",
+              "width": 100,
+            }
+          }
+        >
+          <Image
+            onLoad={[Function]}
+            onLoadStart={[Function]}
+            source={
+              Object {
+                "uri": " https://i.pravatar.cc/150?img=1",
+              }
+            }
+            style={
+              Object {
+                "backgroundColor": "#eee",
+                "borderRadius": 100,
+                "height": 100,
+                "left": 0,
+                "position": "absolute",
+                "top": 0,
+                "width": 100,
+              }
+            }
+          />
+          <ActivityIndicator
+            animating={false}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+          />
+        </View>
+        <View>
+          <Text
+            style={
+              Object {
+                "fontSize": 24,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Morgan James
+          </Text>
+          <Text>
+            ID: 
+            1
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 0.3,
+            "borderColor": "#ddd",
+            "flex": 1,
+            "flexDirection": "row",
+            "paddingHorizontal": 12,
+            "paddingVertical": 12,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderRadius": 100,
+              "height": 100,
+              "justifyContent": "center",
+              "marginRight": 12,
+              "position": "relative",
+              "width": 100,
+            }
+          }
+        >
+          <Image
+            onLoad={[Function]}
+            onLoadStart={[Function]}
+            source={
+              Object {
+                "uri": "https://i.pravatar.cc/150?img=2",
+              }
+            }
+            style={
+              Object {
+                "backgroundColor": "#eee",
+                "borderRadius": 100,
+                "height": 100,
+                "left": 0,
+                "position": "absolute",
+                "top": 0,
+                "width": 100,
+              }
+            }
+          />
+          <ActivityIndicator
+            animating={false}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+          />
+        </View>
+        <View>
+          <Text
+            style={
+              Object {
+                "fontSize": 24,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Esme Coleman
+          </Text>
+          <Text>
+            ID: 
+            2
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 0.3,
+            "borderColor": "#ddd",
+            "flex": 1,
+            "flexDirection": "row",
+            "paddingHorizontal": 12,
+            "paddingVertical": 12,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderRadius": 100,
+              "height": 100,
+              "justifyContent": "center",
+              "marginRight": 12,
+              "position": "relative",
+              "width": 100,
+            }
+          }
+        >
+          <Image
+            onLoad={[Function]}
+            onLoadStart={[Function]}
+            source={
+              Object {
+                "uri": "https://i.pravatar.cc/150?img=3",
+              }
+            }
+            style={
+              Object {
+                "backgroundColor": "#eee",
+                "borderRadius": 100,
+                "height": 100,
+                "left": 0,
+                "position": "absolute",
+                "top": 0,
+                "width": 100,
+              }
+            }
+          />
+          <ActivityIndicator
+            animating={false}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+          />
+        </View>
+        <View>
+          <Text
+            style={
+              Object {
+                "fontSize": 24,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Gary Watson
+          </Text>
+          <Text>
+            ID: 
+            3
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`components UsersList UsersList matches snapshot loading state 1`] = `
+<RCTScrollView
+  data={
+    Array [
+      Object {
+        "avatar": " https://i.pravatar.cc/150?img=1",
+        "id": "1",
+        "name": "Morgan James",
+      },
+      Object {
+        "avatar": "https://i.pravatar.cc/150?img=2",
+        "id": "2",
+        "name": "Esme Coleman",
+      },
+      Object {
+        "avatar": "https://i.pravatar.cc/150?img=3",
+        "id": "3",
+        "name": "Gary Watson",
+      },
+    ]
+  }
+  disableVirtualization={false}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  onContentSizeChange={[Function]}
+  onEndReachedThreshold={2}
+  onLayout={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  refreshControl={
+    <RefreshControlMock
+      onRefresh={[Function]}
+      refreshing={true}
+    />
+  }
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  updateCellsBatchingPeriod={50}
+  viewabilityConfigCallbackPairs={Array []}
+  windowSize={21}
+>
+  <RCTRefreshControl />
+  <View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 0.3,
+            "borderColor": "#ddd",
+            "flex": 1,
+            "flexDirection": "row",
+            "paddingHorizontal": 12,
+            "paddingVertical": 12,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderRadius": 100,
+              "height": 100,
+              "justifyContent": "center",
+              "marginRight": 12,
+              "position": "relative",
+              "width": 100,
+            }
+          }
+        >
+          <Image
+            onLoad={[Function]}
+            onLoadStart={[Function]}
+            source={
+              Object {
+                "uri": " https://i.pravatar.cc/150?img=1",
+              }
+            }
+            style={
+              Object {
+                "backgroundColor": "#eee",
+                "borderRadius": 100,
+                "height": 100,
+                "left": 0,
+                "position": "absolute",
+                "top": 0,
+                "width": 100,
+              }
+            }
+          />
+          <ActivityIndicator
+            animating={false}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+          />
+        </View>
+        <View>
+          <Text
+            style={
+              Object {
+                "fontSize": 24,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Morgan James
+          </Text>
+          <Text>
+            ID: 
+            1
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 0.3,
+            "borderColor": "#ddd",
+            "flex": 1,
+            "flexDirection": "row",
+            "paddingHorizontal": 12,
+            "paddingVertical": 12,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderRadius": 100,
+              "height": 100,
+              "justifyContent": "center",
+              "marginRight": 12,
+              "position": "relative",
+              "width": 100,
+            }
+          }
+        >
+          <Image
+            onLoad={[Function]}
+            onLoadStart={[Function]}
+            source={
+              Object {
+                "uri": "https://i.pravatar.cc/150?img=2",
+              }
+            }
+            style={
+              Object {
+                "backgroundColor": "#eee",
+                "borderRadius": 100,
+                "height": 100,
+                "left": 0,
+                "position": "absolute",
+                "top": 0,
+                "width": 100,
+              }
+            }
+          />
+          <ActivityIndicator
+            animating={false}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+          />
+        </View>
+        <View>
+          <Text
+            style={
+              Object {
+                "fontSize": 24,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Esme Coleman
+          </Text>
+          <Text>
+            ID: 
+            2
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 0.3,
+            "borderColor": "#ddd",
+            "flex": 1,
+            "flexDirection": "row",
+            "paddingHorizontal": 12,
+            "paddingVertical": 12,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderRadius": 100,
+              "height": 100,
+              "justifyContent": "center",
+              "marginRight": 12,
+              "position": "relative",
+              "width": 100,
+            }
+          }
+        >
+          <Image
+            onLoad={[Function]}
+            onLoadStart={[Function]}
+            source={
+              Object {
+                "uri": "https://i.pravatar.cc/150?img=3",
+              }
+            }
+            style={
+              Object {
+                "backgroundColor": "#eee",
+                "borderRadius": 100,
+                "height": 100,
+                "left": 0,
+                "position": "absolute",
+                "top": 0,
+                "width": 100,
+              }
+            }
+          />
+          <ActivityIndicator
+            animating={false}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+          />
+        </View>
+        <View>
+          <Text
+            style={
+              Object {
+                "fontSize": 24,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Gary Watson
+          </Text>
+          <Text>
+            ID: 
+            3
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

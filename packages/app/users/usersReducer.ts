@@ -13,11 +13,13 @@ export const usersReducer = createReducer<UsersState, UsersAction>(
   .handleAction(fetchUsersAsync.request, (state) => ({
     ...state,
     isFetching: true,
+    error: undefined,
   }))
   .handleAction(fetchUsersAsync.success, (state, { payload: users }) => ({
     ...state,
     isFetching: false,
     users,
+    error: undefined,
   }))
   .handleAction(fetchUsersAsync.failure, (state, { payload: error }) => ({
     ...state,

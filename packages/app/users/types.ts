@@ -12,4 +12,5 @@ export interface User {
 export interface UsersState {
   isFetching: boolean;
   users?: User[];
+  error?: Error;
 }
